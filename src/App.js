@@ -8,9 +8,9 @@ function App() {
   useEffect(() => {
     let userLoggedIn = localStorage.getItem('user');
     if (userLoggedIn) {
-      setUsername(JSON.parse(userLoggedIn));
+      setUser(JSON.parse(userLoggedIn));
     }
-  })
+  }, [])
 
   function handleLogin(loggedInUser) {
 
@@ -23,7 +23,7 @@ function App() {
       {
         user ? (
           <div>
-            <p>Welcome {user.name}</p>
+            <p>Welcome, {user.name}</p>
             <List title="To Do List" />
           </div>
         ) : (
