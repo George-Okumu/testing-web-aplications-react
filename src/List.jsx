@@ -8,8 +8,8 @@ export default function List({ title }) {
       {/* Render the data */}
 
       <ul>
-        {mockData.map((element => 
-            <li>{element.name}. {element.complete}</li>
+        {mockData.map(((element, id) => 
+            <li key={id}>{element.name}. {element.complete}</li>
         ))}
       </ul>
     </>
