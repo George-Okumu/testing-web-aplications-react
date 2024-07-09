@@ -14,12 +14,10 @@ export default function Login({onLogin}){
     }
 
     return(<>
-    <form>
-        <input type="text" placeholder="Enter name"/>
-        <input type="text" placeholder="Enter email" />
+        <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Enter name"/>
+        <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter email" />
 
         <button onClick={handleLogin}>Login</button>
-    </form>
     
     </>)
 }
